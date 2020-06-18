@@ -16,7 +16,7 @@ def generate_files(solved_data: dict):
         if not Path(full_file_path).exists():
             new_files += 1
             with open(full_file_path, 'w') as f:
-                string_to_write = f"\"\"\"\n{url}\n\n\"\"\""
+                string_to_write = f"\"\"\"\n{url}\n\n\"\"\"" + '\n' + 'from typing import List'
                 f.write(string_to_write)
 
     print(f'Generated new {new_files} files')
