@@ -10,7 +10,7 @@ def extract_data() -> dict:
     :return:
     """
     file_data_path = '../data/extracted_data.json'
-    with open(file_data_path, 'r', encoding='utf-8') as f:
+    with open(file_data_path, 'r', encoding='utf-8-sig') as f:
         print(f'Reading data from: {file_data_path}')
         return json.load(f)
 
